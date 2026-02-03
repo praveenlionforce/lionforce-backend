@@ -222,6 +222,7 @@ def verify_admin(credentials: HTTPBasicCredentials = Depends(security)):
 
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
+@api_router.head("/")
 async def root():
     return {"message": "Lionforce API - Empowering Minds, Transforming Solutions"}
 
